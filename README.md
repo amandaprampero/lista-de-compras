@@ -1,5 +1,7 @@
 # 🛍️ Lista de Compras
 
+![lista](https://github.com/user-attachments/assets/e187635a-3c83-495e-8f5d-e1ffe73f0909)
+
 ## Configuração do ambiente
 
 - Angular CLI na versão v15.x
