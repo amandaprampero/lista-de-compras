@@ -1,0 +1,25 @@
+<section class="main">
+  <app-input [itemGoingToEdit]="itemToBeEdited">
+  </app-input>
+  <div class="container">
+    <div class="lista">
+      <div class="header-lista">
+        <h4 class="title-list">Lista de Compras</h4>
+        <button class="btn-header" (click)="clearList()">
+          Limpar lista
+        </button>
+      </div>
+      <div *ngIf="listaDeCompras.length !== 0; else emptyList">
+        <div *ngFor="let item of listaDeCompras">
+          <app-item [item]="item" 
+          (itemToEdit)="editItem($event)"
+          (itemToDelete)="deleteItem($event)"
+          ></app-item>
+        </div>
+      </div>
+      <ng-template #emptyList>
+        Não há itens na lista!
+      </ng-template>
+    </div>
+  </div>
+</section>
